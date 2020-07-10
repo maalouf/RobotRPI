@@ -1,0 +1,16 @@
+.offclass{
+  color: red;
+}
+
+.onclass{
+  color: green;
+}
+
+.status{
+  margin-left: 10px;
+}
+
+.largepb{
+  height: 20px;
+  min-width: 90px;
+}

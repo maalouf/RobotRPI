@@ -1,0 +1,31 @@
+.line{
+  width: 100%;
+}
+
+.list {
+  width: 98vw;
+}
+
+.refresh{
+  padding-right: 10%;
+  width: 40%;
+}
+
+.ssidName{
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 85%;
+}
+.refresh{
+  font-size:  xx-large;
+}
+.spinner{
+  position: absolute;
+  top: 40%;
+}
+
+.title{
+  width:100%;
+}

@@ -1,0 +1,26 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap='10px'>
+  <div class="block" #fullscreenContainer id="fullscreenContainer">
+    <div fxLayout="row" class="menue">
+      <button mat-mini-fab class="menuButton" (click)="showMenu = !showMenu">
+        <mat-icon>settings</mat-icon>
+      </button>
+      <div fxLayout="row" fxLayoutAlign="start center" class="menuBlock" fxLayoutGap='10px' *ngIf="showMenu">
+        <button *ngIf="inFullScreen" mat-mini-fab (click)="exitFullscreen()">
+          <mat-icon>fullscreen_exit</mat-icon>
+        </button>
+        <button *ngIf="!inFullScreen" mat-mini-fab (click)="fullscreen()">
+          <mat-icon>fullscreen</mat-icon>
+        </button>
+        <div fxLayout="row" fxLayoutAlign="start center" *ngIf="status.wifi">
+          <p>Wifi: </p> <mat-progress-bar mode="determinate" [value]="status.stength" class="largepb status"></mat-progress-bar>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <p>Battery: </p> <mat-progress-bar mode="determinate" [value]="battery" class="largepb status"></mat-progress-bar>
+          <p style="margin-left:3px;">{{status.battery}}V</p>
+        </div>
+      </div>
+    </div>
+    <img [src]="srcImg" class="imagerpi">
+  </div>
+</div>
+<app-gamepad></app-gamepad>

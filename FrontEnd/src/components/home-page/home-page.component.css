@@ -1,0 +1,37 @@
+.imagerpi{
+  width: 100vw;
+  height: 100vh;
+}
+
+.block{
+  overflow: hidden;
+  position: relative;
+  background-color: black;
+  width: 80%;
+  height: 60%;
+}
+.menue{
+  position: absolute;
+  z-index: 10;
+  margin-left: 5px;
+}
+.status{
+  margin-left: 10px;
+}
+
+.largepb{
+  height: 20px;
+  min-width: 90px;
+}
+.menuBlock {
+  margin-left: 5px;
+}
+.menuButton{
+  margin-right: 5px;
+  top: 6.5px;
+  left:5px;
+}
+.activation{
+  background-color: #1e90ff;
+  color: white;
+}

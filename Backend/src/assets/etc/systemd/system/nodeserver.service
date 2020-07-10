@@ -1,0 +1,16 @@
+[Unit]
+Description=rpiRobot
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/nodejs /home/pi/dist/app.js
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nodejs-cam
+
+[Install]
+WantedBy=multi-user.target

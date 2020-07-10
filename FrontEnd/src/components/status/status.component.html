@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <mat-icon [ngClass]="{'onclass':(status.wifi || status.accessPoint),
+      'offclass':!(status.wifi || status.accessPoint)}">lens</mat-icon>
+      <p class="status"> {{(status.wifi || status.accessPoint)?"Connected":"Disconnected"}}</p>
+    </div>
+    <p *ngIf="(status.wifi || status.accessPoint)"> system is {{(status.wifi)?"Wifi network":"Access Point"}} </p>
+</div>
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+  <p>Used server IP:</p><p> {{status.ip}}</p>
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between " fxLayoutGap="30px">
+    <div fxLayout="row" fxLayoutAlign="space-between center" *ngIf="status.wifi">
+      <p>Wifi Power: </p> <mat-progress-bar mode="determinate" [value]="status.stength" class="largepb status"></mat-progress-bar>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <p>Battery: </p> <mat-progress-bar mode="determinate" [value]="battery" class="largepb status"></mat-progress-bar>
+      <p>{{status.battery}}V</p>
+    </div>
+</div>
